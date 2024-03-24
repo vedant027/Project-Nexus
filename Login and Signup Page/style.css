@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 50px 50px 50px;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.form-box h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+}
+
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: white;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field {
+    border-radius: 20px;
+}
+
+.input-field i{
+    position: absolute;
+    right: 20px;
+    color: white;
+    margin-left: 15px;
+}
+
+.input-group {
+    height: 260px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+form p{
+    text-align: left;
+    font-size: 14px;
+}
+
+form p:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+form p a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button{
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.btn-field button.disable {
+    background: #eaeaea;
+    color: #555;
+}
+
+#signupBtn:hover {
+    background: linear-gradient(45deg, #d2001a, #7462ff);
+}
+
+#signinBtn:hover {
+    background: linear-gradient(45deg, #d2001a, #7462ff);
+}
+
+@media screen and (max-width: 768px) {
+    .form-box {
+        padding: 20px; 
+    }
+    
+    .form-box h1 {
+        font-size: 20px; 
+        margin-bottom: 20px; 
+    }
+    
+    input {
+        padding: 12px;
+    }
+
+    .input-group {
+        height: 240px;
+    }
+    
+    .input-field i {
+        margin-left: 8px;
+    }
+}
